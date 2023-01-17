@@ -1,6 +1,7 @@
 package Lesson_08.Ex006.Interface;
 
 import Lesson_08.Ex006.Applications.Notepad;
+import Lesson_08.Ex006.Format.*;
 
 public class Program {
     public static void main(String[] args) {

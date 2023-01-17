@@ -14,10 +14,10 @@ public class Program {
             int val = rand.nextInt(4);
             switch (val){
                 case 0:
-                    teams.add(new Priest());
+//                    teams.add(new Priest());
                     break;
                 case 1:
-                    teams.add(new Magician());
+//                    teams.add(new Magician());
                     break;
                 case 2:
                     teams.add(new Druid());

@@ -2,7 +2,7 @@ package Seminar_01;
 
 import java.util.Arrays;
 
-public class Heroy {
+public abstract class Heroy implements Inter {
     private String name;
     private int attack;
     private int defence;
@@ -17,6 +17,16 @@ public class Heroy {
         this.damage = damage;
         this.hp = hp;
         this.speed = speed;
+    }
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return null;
     }
 
     public String getName() {

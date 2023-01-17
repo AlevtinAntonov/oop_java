@@ -1,6 +1,6 @@
 package Lesson_08.Ex002;
 
-import Lesson_08.Ex001.Magician;
+import Lesson_08.Ex002.Magician;
 
 public class Druid extends BaseHero {
     private int harmony;

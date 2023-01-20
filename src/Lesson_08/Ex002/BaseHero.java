@@ -2,7 +2,7 @@ package Lesson_08.Ex002;
 
 import java.util.Random;
 
-public abstract class BaseHero {
+public class BaseHero {
     protected static int number;
     protected static Random r;
 
@@ -31,22 +31,14 @@ public abstract class BaseHero {
                 this.name, this.hp, this.getClass().getSimpleName());
     }
 
-    public void healed(int Hp) {
+    protected void healed(int Hp) {
         this.hp = Hp + this.hp > this.maxHp ? this.maxHp : Hp + this.hp;
     }
 
-    public void GetDamage(int damage) {
+    protected void getDamage(int damage) {
         if (this.hp - damage > 0) {
             this.hp -= damage;
         }
-        else { die(); }
-    }
-
-    public abstract void die();
-
-    public void Attack(BaseHero target) {
-        int damage = BaseHero.r.nextInt(20) + 10;
-        target.GetDamage(damage);
+        // else { die(); }
     }
 }
-

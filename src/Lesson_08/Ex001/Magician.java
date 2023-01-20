@@ -1,7 +1,5 @@
 package Lesson_08.Ex001;
-
-import Lesson_07.Ex007.BaseHero;
-
+ 
 public class Magician extends BaseHero {
 
     private int mana;

@@ -1,12 +1,6 @@
 package Lesson_08.Ex006.Format;
 
-import Lesson_08.Ex006.Document.TextDocument;
+import Lesson_08.Ex006.Interface.Saveable;
 
-public abstract class TextFormat {
-    String document;
-    String path;
-
-    public void SaveAs(TextDocument document, String path) {
-
-    }
+public abstract class TextFormat implements Saveable {
 }

@@ -23,7 +23,7 @@ public class BaseHero {
 
     public BaseHero() {
         this(String.format("Hero_Priest #%d", ++BaseHero.number),
-                BaseHero.r.nextInt(200) + 100);
+                BaseHero.r.nextInt(200)+100);
     }
 
     public String getInfo() {
@@ -41,10 +41,4 @@ public class BaseHero {
         }
         // else { die(); }
     }
-
-    public void Attack(BaseHero target) {
-        int damage = BaseHero.r.nextInt(20) + 10;
-        target.GetDamage(damage);
-    }
 }
-

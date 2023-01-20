@@ -1,12 +1,7 @@
 package Lesson_08.Ex002;
-
-import Lesson_07.Ex007.BaseHero;
-
-import java.util.Random;
-
+ 
 public class Magician extends BaseHero {
 
-    public static Random r;
     private int mana;
     private int maxMana;
 

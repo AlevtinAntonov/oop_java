@@ -1,4 +1,4 @@
-package SeminarsOOP;
+package SeminarsOOP.units;
 
 public enum Name {
     Alex, Connor, David, Henry, John, Kevin, Luke, Morgan, Nicholas, Roger, Ronald, Ryan,

@@ -1,4 +1,4 @@
-package SeminarsOOP;
+package SeminarsOOP.units;
 
 public class Crossbowman extends BaseHero {
     int shots;

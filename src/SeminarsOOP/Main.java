@@ -1,5 +1,7 @@
 package SeminarsOOP;
 
+import SeminarsOOP.units.*;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;

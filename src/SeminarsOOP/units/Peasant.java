@@ -1,4 +1,4 @@
-package SeminarsOOP;
+package SeminarsOOP.units;
 
 public class Peasant extends BaseHero {
     protected int delivery;

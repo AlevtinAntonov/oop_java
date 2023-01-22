@@ -1,4 +1,4 @@
-package SeminarsOOP;
+package SeminarsOOP.units;
 
 public class Spearman extends BaseHero {
     public Spearman(int attack, int defence, int[] damage, int maxHealth, int speed, String name, String role) {

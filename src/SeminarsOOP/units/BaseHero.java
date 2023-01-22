@@ -27,6 +27,8 @@ public abstract class BaseHero implements InterfaceHero {
         return health;
     }
 
+    public String getRole() { return role;}
+
     public int getHealth() {
         return health;
     }

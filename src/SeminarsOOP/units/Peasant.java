@@ -1,5 +1,8 @@
 package SeminarsOOP.units;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Peasant extends BaseHero {
     protected int delivery;
     protected int status;
@@ -30,5 +33,6 @@ public class Peasant extends BaseHero {
     public String toString() {
         return "\n Peasant: " + super.toString() + ", delivery=" + delivery + ", status=" + status;
     }
+
 
 }

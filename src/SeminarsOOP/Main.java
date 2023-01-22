@@ -2,9 +2,7 @@ package SeminarsOOP;
 
 import SeminarsOOP.units.*;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,22 +30,42 @@ public class Main {
             }
         }
 
+        movePeasantToEnd(heroesOne);
+        movePeasantToEnd(heroesTwo);
+
         heroesOne.forEach(n -> System.out.print(n.getInfo() + ", "));
         System.out.println();
         heroesTwo.forEach(n -> System.out.print(n.getInfo() + ", "));
         System.out.println();
 
-        Scanner scanner;
-        scanner = new Scanner(System.in);
-        boolean button = true;
-        while (button) {
-            int num = scanner.nextInt();
-            if(num == 0){
-                button = false;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Press Enter to continue ... or To exit any key + Enter ");
+        while (true) {
+            String button = scanner.nextLine();
+            if (button.length() > 0) {
+                break;
             }
             heroesOne.forEach(n -> n.step(heroesOne));
         }
 
 
+    }
+    public static void movePeasantToEnd(ArrayList<BaseHero>  heroesList){
+        List<Integer> tempIndex = new ArrayList<>();
+        for (int i = 0; i < heroesList.size(); i++) {
+
+            if (heroesList.get(i).getRole() == "Peasant") {
+                tempIndex.add(i);
+            }
+        }
+
+        for (int i = 0; i < tempIndex.size(); i++) {
+            heroesList.add(heroesList.get(tempIndex.get(i)));
+        }
+
+        for (int i = tempIndex.size() - 1; i >= 0; i--) {
+            int j = tempIndex.get(i);
+            heroesList.remove(j);
+        }
     }
 }

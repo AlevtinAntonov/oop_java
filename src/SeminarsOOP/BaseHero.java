@@ -63,7 +63,7 @@ public abstract class BaseHero implements InterfaceHero {
 
     @Override
     public String getInfo() {
-        return role + " " + String.valueOf(maxHealth) + " " + String.valueOf(health);
+        return role + " " + String.valueOf(maxHealth) + " " + String.valueOf(health) ;
     }
 
     @Override

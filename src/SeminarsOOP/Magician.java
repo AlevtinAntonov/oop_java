@@ -35,10 +35,10 @@ public class Magician extends BaseHero {
                 }
             }
         }
-        System.out.println("Урон %: " + maxLostPercent + ", Индекс: " + maxLostIndex);
+//        System.out.println("Урон %: " + maxLostPercent + ", Индекс: " + maxLostIndex);
         heroesList.get(maxLostIndex).setHealth(heroesList.get(maxLostIndex).maxHealth);
-        System.out.println(heroesList.get(maxLostIndex));
-        System.out.println("----------------------------");
+//        System.out.println(heroesList.get(maxLostIndex));
+//        System.out.println("----------------------------");
         return maxLostIndex;
     }
 

@@ -1,5 +1,7 @@
 package SeminarsOOP;
 
+import java.util.ArrayList;
+
 public class Sniper extends BaseHero {
     int shots;
 
@@ -12,6 +14,25 @@ public class Sniper extends BaseHero {
     public Sniper(String name) {
         this(12, 10, new int[]{8, 10}, 15, 9, name,
                 "Sniper", 32);
+    }
+
+    @Override
+    public int step(ArrayList<BaseHero> heroesList) {
+        boolean isPeasant = false;
+        for (int i = 0; i < heroesList.size(); i++) {
+
+            if ((heroesList.get(i).role == "Peasant") && (((Peasant)heroesList.get(i)).status == 1)){
+                isPeasant = true;
+                ((Peasant)heroesList.get(i)).status = 0;
+                break;
+                }
+
+            }
+        if(!isPeasant){
+            shots -= 1;
+            }
+        System.out.println(shots);
+        return shots;
     }
 
     @Override

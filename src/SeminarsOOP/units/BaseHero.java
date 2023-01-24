@@ -71,12 +71,12 @@ public abstract class BaseHero implements InterfaceHero {
     @Override
     public String toString() {
         return name +
-               ", role=" + role +
-               ", attack=" + attack +
-               ", defence=" + defence +
-               ", damage=" + Arrays.toString(damage) +
-               ", maxHealth=" + maxHealth +
-               ", health=" + health +
-               ", speed=" + speed;
+                ", role=" + role +
+                ", attack=" + attack +
+                ", defence=" + defence +
+                ", damage=" + Arrays.toString(damage) +
+                ", maxHealth=" + maxHealth +
+                ", health=" + health +
+                ", speed=" + speed;
     }
 }

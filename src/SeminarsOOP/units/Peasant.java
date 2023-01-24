@@ -24,10 +24,14 @@ public class Peasant extends BaseHero {
     }
     public int getStatus() { return status;}
 
-//    @Override
-//    public String getInfo() {
-//        return role + " " + status ;
-//    }
+    public void setDelivery(int delivery) {this.delivery = delivery;}
+
+    @Override
+    public int step(ArrayList<BaseHero> heroesList) {
+        return status = 1;
+    }
+
+    public void setStatus(int status) {this.status = status;}
 
     @Override
     public String toString() {

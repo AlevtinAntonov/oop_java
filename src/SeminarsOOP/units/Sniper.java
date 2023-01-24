@@ -16,22 +16,32 @@ public class Sniper extends BaseHero {
                 "Sniper", 32);
     }
 
+    public int getShots() {
+        return shots;
+    }
+
+    public void setShots(int shots) {
+        this.shots = shots;
+    }
+
     @Override
     public int step(ArrayList<BaseHero> heroesList) {
-        boolean isPeasant = false;
-        for (int i = 0; i < heroesList.size(); i++) {
-
-            if ((heroesList.get(i).role == "Peasant") && (((Peasant)heroesList.get(i)).status == 1)){
-                isPeasant = true;
-                ((Peasant)heroesList.get(i)).status = 0;
-                break;
-                }
-
-            }
-        if(!isPeasant){
+        if (shots > 0){
             shots -= 1;
+            System.out.println("Снайпер: "+ name + " выстрелил, осталось стрел: " + shots);
+        } else {
+            System.out.println("У Снайпера: "+ name + " -> Стрелы закончились :)");
+        }
+
+        for (int i = 0; i < heroesList.size(); i++) {
+            if ((heroesList.get(i).role == "Peasant") && ((Peasant) heroesList.get(i)).status == 1){
+                shots +=1;
+                ((Peasant) heroesList.get(i)).setStatus(0);
+                System.out.println("Крестьянин " + ((Peasant) heroesList.get(i)).name + " принес стрелу Снайперу: "
+                        + name + ", стало стрел -> " + shots);
+                break;
             }
-        System.out.println(shots);
+        }
         return shots;
     }
 

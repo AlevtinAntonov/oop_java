@@ -67,7 +67,8 @@ public abstract class BaseHero implements InterfaceHero {
     public String getInfo() {
         return role + " " + String.valueOf(maxHealth) + " " + String.valueOf(health) ;
     }
-
+//    String outStr = String.format("￼ %d\t\uD83D\uDEE1 %d\t￼%.1f\t￼%d", attack,protect,health,(damage[0] + damage[1])/2,speed);
+//    return outstr;
     @Override
     public String toString() {
         return name +

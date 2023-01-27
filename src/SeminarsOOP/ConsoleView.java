@@ -1,10 +1,8 @@
 package SeminarsOOP;
 
-import chars.Vector2;
+import SeminarsOOP.chars.Vector2;
 
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Locale;
 
 public class ConsoleView {
 
@@ -64,14 +62,14 @@ public class ConsoleView {
     private static String getHeroChar(Vector2 position){
         String str = "| ";
         for (int i = 0; i < Main.GANG_SIZE; i++) {
-            if (Main.darkSide.get(i).getPosition().isEquals(position)) {
-                str = "|" + AnsiColors.ANSI_BLUE + Main.darkSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET + "|"
-                        + " ".repeat(3) + AnsiColors.ANSI_GREEN + Main.whiteSide.get(i).getInfo() + AnsiColors.ANSI_RESET
-                        + " ".repeat(5) + AnsiColors.ANSI_BLUE + Main.darkSide.get(i).getInfo() + AnsiColors.ANSI_RESET;
-            }
 
+            if (Main.darkSide.get(i).getPosition().isEquals(position)) {
+                str = "|" + AnsiColors.ANSI_BLUE + Main.darkSide.get(i).getRole().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET + "|"
+                      + " ".repeat(3) + AnsiColors.ANSI_GREEN +  Main.whiteSide.get(i).getInfo() + AnsiColors.ANSI_RESET
+                      + " ".repeat(5) + AnsiColors.ANSI_BLUE + Main.darkSide.get(i).getInfo() + AnsiColors.ANSI_RESET;
+            }
             if (Main.whiteSide.get(i).getPosition().isEquals(position)){
-                str = "|" + AnsiColors.ANSI_GREEN + Main.whiteSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
+                str = "|" + AnsiColors.ANSI_GREEN + Main.whiteSide.get(i).getRole().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
             }
         }
         return str;
